@@ -183,6 +183,10 @@ def _today_pacific() -> str:
     return datetime.now(ZoneInfo("America/Los_Angeles")).date().isoformat()
 
 
+def _key_fingerprint() -> str:
+    return hashlib.sha256((config.GEMINI_API_KEY or "nokey").encode()).hexdigest()[:8]
+
+
 def _check_and_count_daily(role: str, n: int = 1) -> None:
     """Refuse to start a call that would go over our daily budget.
 
@@ -190,7 +194,10 @@ def _check_and_count_daily(role: str, n: int = 1) -> None:
     embeddings Google counts EVERY TEXT in a batch as one request (we learned this
     when 35 batch calls carrying 989 texts used up a 1,000/day quota).
     """
-    model, day = config.MODELS[role], _today_pacific()
+    # Quotas belong to a Google project (i.e. an API key), not to this machine. Count per
+    # key fingerprint (8 hex chars of a hash; the key itself is never stored), so a new
+    # key, or a grader's key, starts at 0 instead of inheriting someone else's usage.
+    model, day = f"{config.MODELS[role]}#{_key_fingerprint()}", _today_pacific()
     c = _cache()
     row = c.execute("SELECT n FROM daily_requests WHERE day=? AND model=?", (day, model)).fetchone()
     used = row[0] if row else 0

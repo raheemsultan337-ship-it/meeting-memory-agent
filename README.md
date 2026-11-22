@@ -89,5 +89,5 @@ python search.py --compare "how did they stop the remote getting lost?" ES2005  
 ## Tests
 
 ```bash
-python -m pytest -v      # 39 tests, no API key needed (fake Gemini client + fake clock)
+python -m pytest -v      # 40 tests, no API key needed (fake Gemini client + fake clock)
 ```

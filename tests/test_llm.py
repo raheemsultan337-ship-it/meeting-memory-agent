@@ -223,3 +223,14 @@ def test_daily_quota_falls_back_to_next_model(fake, monkeypatch):
     assert config.MODELS["fast"] == "backup"
     assert llm.generate_text("fast", "x") == "from backup"   # cached under backup
     assert fake.models.gen_calls == 2
+
+
+def test_daily_budget_is_per_api_key(fake, monkeypatch):
+    # Quotas belong to a key/project: a new key must not inherit another key's usage.
+    monkeypatch.setattr(config, "GEMINI_API_KEY", "key-one")
+    for i in range(5):                      # rpd=5 in the fixture
+        llm.generate_text("fast", f"k1-{i}")
+    with pytest.raises(llm.QuotaExhausted):
+        llm.generate_text("fast", "k1-over")
+    monkeypatch.setattr(config, "GEMINI_API_KEY", "key-two")
+    assert llm.generate_text("fast", "k2-first") == "ok"   # fresh budget for the new key
