@@ -33,5 +33,12 @@ Python, SQLite (FTS5 + vector blobs), numpy, pydantic, rapidfuzz, and Gemini on 
 
 **1,000 meetings** (measured per meeting: extraction 8.9k in / 1.3k out tokens, 7 s; embeddings 7.1k tokens): about 11M text + 7M embedding tokens, **about $2.70 at list prices** (to verify). Time is **about 3 h sequential or 15-20 min with 10 workers** on paid quota; **about 6 days on the free tier** (embedding cap). About half a cent per question.
 
-## Production at 10,000 meetings
-Postgres + pgvector instead of SQLite/numpy, and a worker queue: each meeting is already an independent, resumable job, and only its team's timeline is rebuilt. Paid quota, so chunks can go back to ~250 words. Group meetings by project/participants: real meetings don't come with team labels and a-d order, which is the biggest assumption this corpus allows. An eval set that grows with every wrong answer.
+## Would it fall over at 10,000 meetings (72x)?
+**What holds:** ingest and extraction are independent per-meeting jobs (bounded prompts, linear cost); the agent's context stays the same size; the gate checks one meeting. Storage is about 3.5M turns, 106k facts, ~2 GB. Brute-force vector search, **measured** on 220k vectors: **31 ms/query, 680 MB RAM**, so slow but not broken.
+**What breaks, worst first:**
+1. **The timeline: one LLM pass per team over all its facts.** That's fine at 4 meetings (~40 facts), but a real project with 500 meetings has ~5k facts, which won't fit in one prompt, and the output would be truncated. Fix: update it **one meeting at a time** (current state + new meeting -> what changed?), sharded by topic. I took this shortcut for the deadline.
+2. **Team labels and a-d order.** Every tool filters by team; real meetings arrive unlabelled, with named people, not A-D. Fix: group by project, participants and date; resolve speakers; add cross-project search (today a question like "which projects dropped the LCD?" is unsupported).
+3. **Free-tier quotas:** 10k extractions at 500/day is 20 days; ~55k embeddings at 1,000/day is 55 days. Fix: paid quota, which is ~30 min with 10 workers and ~$25-30 (estimated).
+4. **SQLite with parallel writers** gives lock contention (seen even with 2 jobs), and each process loads every vector. Fix: Postgres + pgvector and a worker queue.
+5. **The agent starts with the whole team timeline**, which bloats at hundreds of topics. Fix: fetch only the relevant topics on demand.
+Plus an eval set that grows with every wrong answer.
