@@ -1,5 +1,9 @@
 # Meeting Memory Agent
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raheemsultan337-ship-it/meeting-memory-agent/blob/master/colab_demo.ipynb)
+
+**Try it in your browser, no install:** open the Colab notebook above, then *Runtime → Run all*. Sections 1-5 run with no API key, replaying from the shipped memory store and response cache; section 6 asks a new question with a free Gemini key.
+
 An agent that turns 138 real meeting transcripts (AMI corpus) into searchable memory, answers questions about what was decided, what changed and who said what (with word-for-word citations), and writes a pre-meeting brief.
 
 - **Answers:** [`answers.json`](answers.json) (25 answers + TS3012 brief), produced by `python run.py all`
