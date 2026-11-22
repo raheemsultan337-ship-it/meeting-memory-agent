@@ -1,0 +1,23 @@
+Brief for Team TS3012 before the final meeting (based on meetings TS3012a to TS3012c).
+
+DECIDED SO FAR
+- Speaker A (project manager) established the selling price at 25 Euros and the production cost at approximately 12.5 Euros. [TS3012a: "Selling price, twenty five Euros. That's for you."] [TS3012a: "The production price, twelve and a half Euros, approximately."]
+- Speaker A (project manager) confirmed that the team will definitely use rubber for the case material. [TS3012c: "Okay. Okay, so we're definitely going for rubber."]
+- Speaker A (project manager) agreed to implement a finder feature using a button on the TV that triggers a beep on the remote. [TS3012b: "the beep is a very simple thing to imple implement, just make a button on your T_V_ and just hit the button, it beeps somewhere."]
+- Speaker C (industrial designer) acknowledged the team decision to drop the scroll-wheel component. [TS3012c: "Okay. You are out of course. You are okay, clear."]
+
+WHAT CHANGED ALONG THE WAY
+- Speaker A (project manager) initially stated the scope was solely for a TV remote, but later decided to design a universal remote control. [TS3012a: "The project I got was just for a T_V_ remote control."] [TS3012b: "I think it's universal. I think we should go for universal"]
+- Speaker C (industrial designer) originally suggested a light material, but the team later settled on rubber. [TS3012a: "it should be something light. That's it speaks for itself"] [TS3012c: "Okay. Okay, so we're definitely going for rubber."]
+- Speaker A (project manager) initially rejected speech recognition due to immature technology, but later agreed to incorporate it. [TS3012b: "It's Yeah. It's not a mature technology, I think it takes a lot of memory and everything in in a remote control"] [TS3012c: "If it's small, if it's fits, if if people like it, why not?"]
+- Speaker B (user interface designer) questioned including an LCD screen under the 25 euro limit, but Speaker A (project manager) later decided to build one into the design. [TS3012b: "Oh, we're not going to be able to sell it for twenty-five then, with an L_C_D_ screen."] [TS3012c: "take it t to consideration to build an L_C_D_ screen in it."]
+
+OPEN ACTIONS AND OWNERS
+- Speaker C (industrial designer) promised to research whether rechargeable batteries and a docking station are feasible and available. [TS3012b: "I'm going to try to find that out. I'm not sure if there's information available on this"]
+- Speaker B (user interface designer) committed to drawing design ideas on paper to share at the next meeting. [TS3012b: "I'll put some on paper and present them next time uh the ideas that I have."]
+- Speaker D (marketing) still needs to look up precise survey figures regarding consumer interest in voice recognition. [TS3012c: "Mean of uh seventy percent I think. Uh I'm I have to look it up."]
+
+OPEN DISAGREEMENTS
+- Speaker C (industrial designer) advocated for a flashy yellow remote for younger users, but Speaker B (user interface designer) argued for a neutral base color when using covers. [TS3012c: "I would change. I would take a yellow remote control. To have it flashy, to have it it's for young people."] [TS3012c: "taking that into consideration, it's better to have a neutral base colour than to have a flashy"]
+- Speaker C suggested a kinetic energy feature, but Speaker A (project manager) objected because remotes remain stationary most of the time. [TS3012c: "remotes lie still I think like ninety nine percent of the time. So I don't think that's a really good"]
+- Speaker A (project manager) opposed the scroll-wheel on the basis that it provides no useful extra function. [TS3012c: "if it's not useful, I don't think it I don't think it gives an extra function to the remote."]

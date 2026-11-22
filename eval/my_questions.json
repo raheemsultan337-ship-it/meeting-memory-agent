@@ -1,0 +1,75 @@
+{
+  "note": "Our own questions. Gold answers were checked by reading the transcript turns listed in 'evidence' (meeting#turn). Not rewordings of the official 25. 'must' = facts a correct answer has to contain.",
+  "questions": [
+    {
+      "id": "E01", "team": "ES2004", "kind": "decision changed twice",
+      "question": "Team ES2004's energy source changed across their meetings. What did they first choose, what did they settle on in their third meeting, and what did the final design use?",
+      "gold": "First rechargeable batteries with a docking station (ES2004b), then kinetic charging like in wrist watches (ES2004c), and the final design went back to standard batteries (ES2004d) to save cost.",
+      "must": ["docking", "kinetic", "standard batter"],
+      "evidence": ["ES2004b#262", "ES2004c#292", "ES2004d#292", "ES2004d#314"]
+    },
+    {
+      "id": "E02", "team": "ES2003", "kind": "feature dropped + replacement",
+      "question": "Team ES2003 planned a way to find a lost remote. What was it, who was to look into it, what happened to it, and what did they rely on instead to make the remote harder to lose?",
+      "gold": "A speaker and LED (beeping) locator; Speaker D (industrial designer) was to look at the speaker and LED; it was dropped in the final meeting because of budget cuts, and they relied on a special coloured case to make it harder to lose.",
+      "must": ["speaker", "D", "drop|rid", "colour|color"],
+      "evidence": ["ES2003b#180", "ES2003b#181", "ES2003d#144", "ES2003d#341", "ES2003d#159"]
+    },
+    {
+      "id": "E03", "team": "ES2002", "kind": "reversal in final meeting",
+      "question": "Did Team ES2002's final design keep an LCD panel? What was said about it in meeting c, and what happened to it in meeting d?",
+      "gold": "In ES2002c Speaker A (industrial designer) questioned what an LCD display would achieve; in ES2002d a basic LCD had been added but Speaker A suggested removing the LCD panel together with the advanced chip to save cost, so the LCD was taken out.",
+      "must": ["advanced chip", "remov|take away|taken out|dropped|without"],
+      "evidence": ["ES2002c#237", "ES2002c#244", "ES2002d#149", "ES2002d#159"]
+    },
+    {
+      "id": "E04", "team": "ES2002", "kind": "who said what",
+      "question": "Which age group did Team ES2002 target, what shape did they adopt for the remote, and who suggested that shape?",
+      "gold": "Fifteen to thirty-five year olds (ES2002b); a snowman shape, suggested by Speaker C (user interface designer) in ES2002c.",
+      "must": ["fifteen|15", "thirty.five|35", "snowman", "C"],
+      "evidence": ["ES2002b#144", "ES2002c#10", "ES2002c#216", "ES2002c#230"]
+    },
+    {
+      "id": "E05", "team": "ES2005", "kind": "proposal -> doubt -> outcome",
+      "question": "Team ES2005 discussed fruit-shaped casings. Who suggested a banana, who doubted it, and what prototypes were shown in the final meeting?",
+      "gold": "Speaker A (industrial designer) suggested a banana-shaped remote in ES2005c; Speaker D (user interface designer) was not sure about the banana idea; in ES2005d prototypes based on a banana and a tomato were shown.",
+      "must": ["A", "D", "banana", "tomato"],
+      "evidence": ["ES2005c#196", "ES2005c#198", "ES2005c#206", "ES2005d#27"]
+    },
+    {
+      "id": "E06", "team": "ES2005", "kind": "numbers",
+      "question": "What production cost was Team ES2005 aiming for, and what unit cost did they report in their final meeting?",
+      "gold": "They aimed for twelve Euros fifty (ES2005a) but the unit, minus the extra scroll buttons, came to fourteen point six Euros (ES2005d).",
+      "must": ["twelve|12", "fourteen point six|14.6"],
+      "evidence": ["ES2005a#33", "ES2005d#71"]
+    },
+    {
+      "id": "E07", "team": "TS3009", "kind": "numbers",
+      "question": "What production cost limit did Team TS3009 start with, and what figure did their project manager give at the end as the lowest cost they could make a trendy remote for?",
+      "gold": "Twelve and a half Euros (TS3009a); at the end Speaker A (project manager) said fourteen point one Euros (TS3009d).",
+      "must": ["twelve|12", "fourteen point one|14.1", "A"],
+      "evidence": ["TS3009a#145", "TS3009d#399"]
+    },
+    {
+      "id": "E08", "team": "TS3009", "kind": "objection + later trade-off",
+      "question": "Team TS3009's project manager objected to an LCD screen early on. What was the objection, and in the final meeting who argued for keeping the LCD rather than the titanium?",
+      "gold": "In TS3009b Speaker A (project manager) said that with twelve Euro fifty production cost they couldn't afford an LCD; in TS3009d Speaker D (marketing) argued to change the titanium to titanium-looking hard plastic rather than lose the LCD screen.",
+      "must": ["afford|cost|twelve", "D"],
+      "evidence": ["TS3009b#113", "TS3009d#390"]
+    },
+    {
+      "id": "E09", "team": "ES2004", "kind": "hard: messy spoken numbers",
+      "question": "In Team ES2004's final meeting, what production cost did they reach after removing the sample speaker, and how did that compare with their budget from the first meeting?",
+      "gold": "Removing the sample speaker brought it to about twelve point three five Euros (Speaker C, ES2004d), just under the twelve point fifty Euro production cost set in ES2004a. (The meeting is confused: B also says twelve point two five.)",
+      "must": ["twelve point three five|12.35|twelve point two five|12.25", "twelve point fifty|12.50|12.5|twelve fifty"],
+      "evidence": ["ES2004d#323", "ES2004d#351", "ES2004d#355", "ES2004a"]
+    },
+    {
+      "id": "E10", "team": "ES2002", "kind": "hard: implicit reference",
+      "question": "Team ES2002 talked about using rubber in meeting c. What did they want rubber for, and what happened to the rubber in their final design?",
+      "gold": "In ES2002c they planned plastic with rubber (rubber buttons / rubber on the case, like shock-resistant phones); in ES2002d they had to skip the rubber for the buttons and use plastic because of cost.",
+      "must": ["button", "plastic"],
+      "evidence": ["ES2002c#209", "ES2002c#283", "ES2002c#354", "ES2002d#114", "ES2002d#115", "ES2002d#554"]
+    }
+  ]
+}

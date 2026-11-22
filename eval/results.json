@@ -1,0 +1,358 @@
+[
+  {
+    "id": "E01",
+    "team": "ES2004",
+    "kind": "decision changed twice",
+    "question": "Team ES2004's energy source changed across their meetings. What did they first choose, what did they settle on in their third meeting, and what did the final design use?",
+    "gold": "First rechargeable batteries with a docking station (ES2004b), then kinetic charging like in wrist watches (ES2004c), and the final design went back to standard batteries (ES2004d) to save cost.",
+    "must": 1.0,
+    "evidence": [
+      "ES2004b#262",
+      "ES2004c#292",
+      "ES2004d#292",
+      "ES2004d#314"
+    ],
+    "answer": "Team ES2004 first chose rechargeable batteries with a docking station, then in their third meeting they settled on kinetic charging with watch-type batteries, and the final design used standard batteries.",
+    "citations": [
+      {
+        "meeting_id": "ES2004b",
+        "quote": "Yes. Rechargeable with a docking station."
+      },
+      {
+        "meeting_id": "ES2004c",
+        "quote": "Mm, so can I just recap uh Sarah, for the decisions that we've made, kinetic charging, the watch-type batteries, um L_C_D_ display on th the top side of the flip"
+      },
+      {
+        "meeting_id": "ES2004d",
+        "quote": "If we moved away from our much loved idea of a kinetic battery and just went with the standard batteries"
+      }
+    ],
+    "steps": 4,
+    "trace": [
+      "search({\"query\": \"kinetic charging watch-type batteries standard batteries\"})",
+      "search({\"query\": \"standard batteries kinetic battery ES2004d\"})",
+      "search({\"query\": \"Rechargeable with a docking station ES2004b\"})",
+      "submit_answer({\"answer\": \"Team ES2004 first chose rechargeable batteries with a docking station, then in their third meeting they sett)"
+    ],
+    "citations_ok": true,
+    "verdict": "correct",
+    "judge_reason": "The answer accurately captures all three energy source changes: rechargeable batteries with a docking station initially, kinetic charging in the third meeting, and standard batteries for the final design."
+  },
+  {
+    "id": "E02",
+    "team": "ES2003",
+    "kind": "feature dropped + replacement",
+    "question": "Team ES2003 planned a way to find a lost remote. What was it, who was to look into it, what happened to it, and what did they rely on instead to make the remote harder to lose?",
+    "gold": "A speaker and LED (beeping) locator; Speaker D (industrial designer) was to look at the speaker and LED; it was dropped in the final meeting because of budget cuts, and they relied on a special coloured case to make it harder to lose.",
+    "must": 1.0,
+    "evidence": [
+      "ES2003b#180",
+      "ES2003b#181",
+      "ES2003d#144",
+      "ES2003d#341",
+      "ES2003d#159"
+    ],
+    "answer": "Team ES2003 planned a remote locator using a transmitter attached to the television, a microphone/speaker on the unit, and a bright LED, with Speaker D assigned to look into it; however, the feature was eventually dropped due to budget constraints, and instead they relied on a special colored (yellow) case to make the remote harder to lose.",
+    "citations": [
+      {
+        "meeting_id": "ES2003b",
+        "quote": "So I should just look at um the speaker, the speaker and an L_E_D_. And"
+      },
+      {
+        "meeting_id": "ES2003d",
+        "quote": "So it looks like we're gonna get rid of the whole loca locator thing."
+      },
+      {
+        "meeting_id": "ES2003d",
+        "quote": "let's say that and then we can have our special coloured case and then we at least have make it a little harder to lose."
+      }
+    ],
+    "steps": 4,
+    "trace": [
+      "search({\"query\": \"locator speaker LED monkey screaming ES2003\"})",
+      "search({\"query\": \"locating locator get rid of ES2003d\"})",
+      "search({\"query\": \"yellow make it harder to lose ES2003c\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"So I should just look at um the speaker, the speaker and an L_E_D_. And\", \"meeting_id\": \"ES200)"
+    ],
+    "citations_ok": true,
+    "verdict": "correct",
+    "judge_reason": "The answer accurately captures all elements of the gold answer: the remote locator mechanism (speaker/LED), the designated speaker (Speaker D), the reason it was dropped (budget), and the alternative solution used instead (colored case)."
+  },
+  {
+    "id": "E03",
+    "team": "ES2002",
+    "kind": "reversal in final meeting",
+    "question": "Did Team ES2002's final design keep an LCD panel? What was said about it in meeting c, and what happened to it in meeting d?",
+    "gold": "In ES2002c Speaker A (industrial designer) questioned what an LCD display would achieve; in ES2002d a basic LCD had been added but Speaker A suggested removing the LCD panel together with the advanced chip to save cost, so the LCD was taken out.",
+    "must": 1.0,
+    "evidence": [
+      "ES2002c#237",
+      "ES2002c#244",
+      "ES2002d#149",
+      "ES2002d#159"
+    ],
+    "answer": "No, Team ES2002's final design did not keep an LCD panel. In meeting c, Speaker B (project manager) stated there was no need for an LCD display or talk-back, and in meeting d, Speaker B suggested removing the LCD display entirely along with the advanced chip to stay within budget.",
+    "citations": [
+      {
+        "meeting_id": "ES2002c",
+        "quote": "I would say no need for a talk-back. Uh does anybody disagree with that?"
+      },
+      {
+        "meeting_id": "ES2002d",
+        "quote": "So w what's our reviewed suggestion? Um take away the L_C_ display?"
+      }
+    ],
+    "steps": 4,
+    "trace": [
+      "search({\"meeting_id\": \"ES2002c\", \"query\": \"LCD display talk-back\"})",
+      "search({\"query\": \"LCD display screen\", \"meeting_id\": \"ES2002d\"})",
+      "search({\"query\": \"take away the L_C_ display\", \"meeting_id\": \"ES2002d\"})",
+      "submit_answer({\"answer\": \"No, Team ES2002's final design did not keep an LCD panel. In meeting c, Speaker B (project manager) stated t)"
+    ],
+    "citations_ok": true,
+    "verdict": "partial",
+    "judge_reason": "The answer correctly identifies that the final design did not keep an LCD panel, but it incorrectly attributes the quotes and suggestions to Speaker B (project manager) instead of Speaker A (industrial designer) as stated in the gold answer."
+  },
+  {
+    "id": "E04",
+    "team": "ES2002",
+    "kind": "who said what",
+    "question": "Which age group did Team ES2002 target, what shape did they adopt for the remote, and who suggested that shape?",
+    "gold": "Fifteen to thirty-five year olds (ES2002b); a snowman shape, suggested by Speaker C (user interface designer) in ES2002c.",
+    "must": 1.0,
+    "evidence": [
+      "ES2002b#144",
+      "ES2002c#10",
+      "ES2002c#216",
+      "ES2002c#230"
+    ],
+    "answer": "Team ES2002 targeted the fifteen to thirty five age bracket and adopted a snowman shape for the remote control, which was suggested by Speaker C (user interface designer).",
+    "citations": [
+      {
+        "meeting_id": "ES2002b",
+        "quote": "Okay, so fifteen to thirty five, look fairly young. You know, they have bit of expendable income to spend on this sort of thing."
+      },
+      {
+        "meeting_id": "ES2002c",
+        "quote": "I'd quite like a sort of uh snowman type shape."
+      }
+    ],
+    "steps": 3,
+    "trace": [
+      "search({\"query\": \"fifteen to thirty five snowman shape\"})",
+      "search({\"query\": \"fifteen to thirty five age bracket ES2002b\"})",
+      "submit_answer({\"answer\": \"Team ES2002 targeted the fifteen to thirty five age bracket and adopted a snowman shape for the remote contr)"
+    ],
+    "citations_ok": true,
+    "verdict": "correct",
+    "judge_reason": "The answer correctly identifies the target age group, the snowman shape of the remote, and who suggested it, matching all details of the gold answer."
+  },
+  {
+    "id": "E05",
+    "team": "ES2005",
+    "kind": "proposal -> doubt -> outcome",
+    "question": "Team ES2005 discussed fruit-shaped casings. Who suggested a banana, who doubted it, and what prototypes were shown in the final meeting?",
+    "gold": "Speaker A (industrial designer) suggested a banana-shaped remote in ES2005c; Speaker D (user interface designer) was not sure about the banana idea; in ES2005d prototypes based on a banana and a tomato were shown.",
+    "must": 1.0,
+    "evidence": [
+      "ES2005c#196",
+      "ES2005c#198",
+      "ES2005c#206",
+      "ES2005d#27"
+    ],
+    "answer": "Speaker A (industrial designer) suggested a banana-shaped remote control, while Speaker D (user interface designer) initially doubted its practicality for pointing. In the final meeting, prototypes based on a banana and a tomato were shown.",
+    "citations": [
+      {
+        "meeting_id": "ES2005c",
+        "quote": "Yeah? Okay, like we could have a big banana shaped remote control, 'cause it's yellow fruit, right?"
+      },
+      {
+        "meeting_id": "ES2005c",
+        "quote": "Yeah. y I'm I'm not sure about the banana idea."
+      },
+      {
+        "meeting_id": "ES2005d",
+        "quote": "Um one's based on the banana, one's based on the tomato and the other one is st"
+      }
+    ],
+    "steps": 5,
+    "trace": [
+      "search({\"query\": \"banana\"})",
+      "search({\"query\": \"tomato banana prototypes\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"What about a banana?\", \"meeting_id\": \"ES2005c\"}, {\"meeting_id\": \"ES2005c\", \"quote\": \"Yeah. y I)",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"ES2005c\", \"quote\": \"What about a banana? Yeah? Okay, like we could have a big banana shap)",
+      "submit_answer({\"answer\": \"Speaker A (industrial designer) suggested a banana-shaped remote control, while Speaker D (user interface de)"
+    ],
+    "citations_ok": true,
+    "verdict": "correct",
+    "judge_reason": "The answer correctly identifies Speaker A as suggesting the banana, Speaker D as doubting it, and both banana and tomato prototypes in the final meeting, matching the gold answer."
+  },
+  {
+    "id": "E06",
+    "team": "ES2005",
+    "kind": "numbers",
+    "question": "What production cost was Team ES2005 aiming for, and what unit cost did they report in their final meeting?",
+    "gold": "They aimed for twelve Euros fifty (ES2005a) but the unit, minus the extra scroll buttons, came to fourteen point six Euros (ES2005d).",
+    "must": 1.0,
+    "evidence": [
+      "ES2005a#33",
+      "ES2005d#71"
+    ],
+    "answer": "Team ES2005 aimed for a unit production cost of twelve Euros fifty, but reported in their final meeting that the current unit production cost was fourteen point six Euros, as stated by Speaker C (project manager).",
+    "citations": [
+      {
+        "meeting_id": "ES2005a",
+        "quote": "remember we're trying to make it for twelve Euros fifty."
+      },
+      {
+        "meeting_id": "ES2005d",
+        "quote": "it's gonna cost us fourteen point six Euros."
+      }
+    ],
+    "steps": 2,
+    "trace": [
+      "search({\"query\": \"twelve Euros fifty fourteen point six Euros production cost\"})",
+      "submit_answer({\"answer\": \"Team ES2005 aimed for a unit production cost of twelve Euros fifty, but reported in their final meeting that)"
+    ],
+    "citations_ok": true,
+    "verdict": "correct",
+    "judge_reason": "The answer accurately states both the target production cost of twelve Euros fifty and the final reported cost of fourteen point six Euros, matching the gold answer."
+  },
+  {
+    "id": "E07",
+    "team": "TS3009",
+    "kind": "numbers",
+    "question": "What production cost limit did Team TS3009 start with, and what figure did their project manager give at the end as the lowest cost they could make a trendy remote for?",
+    "gold": "Twelve and a half Euros (TS3009a); at the end Speaker A (project manager) said fourteen point one Euros (TS3009d).",
+    "must": 1.0,
+    "evidence": [
+      "TS3009a#145",
+      "TS3009d#399"
+    ],
+    "answer": "Team TS3009 started with a production cost limit of twelve and a half Euros, and Speaker A (project manager) later stated that fourteen point one was the lowest price they could make a trendy remote for.",
+    "citations": [
+      {
+        "meeting_id": "TS3009a",
+        "quote": "we want to keep it our costs at twelve and a half Euros so, keep uh that in mind"
+      },
+      {
+        "meeting_id": "TS3009d",
+        "quote": "I'll put in the report we that we think that fourteen point one is the l m lowest price you can make a remote for that's trendy d these days."
+      }
+    ],
+    "steps": 5,
+    "trace": [
+      "search({\"query\": \"twelve and a half Euros\"})",
+      "search({\"query\": \"fourteen point one\"})",
+      "search({\"query\": \"fourteen point one is the lowest price\"})",
+      "search({\"query\": \"we want to keep it our costs at twelve and a half Euros\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"TS3009a\", \"quote\": \"we want to keep it our costs at twelve and a half Euros so, keep uh t)"
+    ],
+    "citations_ok": true,
+    "verdict": "correct",
+    "judge_reason": "The answer correctly identifies the starting production cost limit of 12.5 euros and the final lowest cost stated by the project manager (Speaker A) as 14.1 euros, matching the gold answer."
+  },
+  {
+    "id": "E08",
+    "team": "TS3009",
+    "kind": "objection + later trade-off",
+    "question": "Team TS3009's project manager objected to an LCD screen early on. What was the objection, and in the final meeting who argued for keeping the LCD rather than the titanium?",
+    "gold": "In TS3009b Speaker A (project manager) said that with twelve Euro fifty production cost they couldn't afford an LCD; in TS3009d Speaker D (marketing) argued to change the titanium to titanium-looking hard plastic rather than lose the LCD screen.",
+    "must": 1.0,
+    "evidence": [
+      "TS3009b#113",
+      "TS3009d#390"
+    ],
+    "answer": "Speaker A (project manager) objected to the LCD screen because it was unaffordable within the twelve Euro fifty production budget. In the final meeting, Speaker D (marketing) argued for keeping the LCD screen rather than the titanium.",
+    "citations": [
+      {
+        "meeting_id": "TS3009b",
+        "quote": "Well with twelve Euro fifty as production cost, we can't uh afford an L_C_D_ uh"
+      },
+      {
+        "meeting_id": "TS3009d",
+        "quote": "Or you shou It's Or change the titanium or dump the L_C_D_ screen. But I think you could better change uh titanium to hard a hard kind of plastic looking like titanium than lose the L_C_D_ screen."
+      }
+    ],
+    "steps": 9,
+    "trace": [
+      "search({\"query\": \"LCD screen titanium project manager\"})",
+      "search({\"query\": \"LCD screen objection project manager\"})",
+      "search({\"query\": \"LCD screen titanium\"})",
+      "search({\"query\": \"titanium LCD screen marketing\"})",
+      "search({\"query\": \"Speaker A personal taste unusable market\"})",
+      "search({\"query\": \"Speaker A personal taste LCD screen\"})",
+      "find_facts({\"keyword\": \"LCD\"})",
+      "read_turns({\"to_turn\": 115, \"from_turn\": 110, \"meeting_id\": \"TS3009b\"})",
+      "submit_answer({\"answer\": \"Speaker A (project manager) objected to the LCD screen because it was unaffordable within the twelve Euro fi)"
+    ],
+    "citations_ok": true,
+    "verdict": "correct",
+    "judge_reason": "The answer correctly identifies Speaker A's objection regarding the cost of the LCD screen and Speaker D as the person who argued for keeping the LCD instead of the titanium."
+  },
+  {
+    "id": "E09",
+    "team": "ES2004",
+    "kind": "hard: messy spoken numbers",
+    "question": "In Team ES2004's final meeting, what production cost did they reach after removing the sample speaker, and how did that compare with their budget from the first meeting?",
+    "gold": "Removing the sample speaker brought it to about twelve point three five Euros (Speaker C, ES2004d), just under the twelve point fifty Euro production cost set in ES2004a. (The meeting is confused: B also says twelve point two five.)",
+    "must": 0.5,
+    "evidence": [
+      "ES2004d#323",
+      "ES2004d#351",
+      "ES2004d#355",
+      "ES2004a"
+    ],
+    "answer": "In Team ES2004's final meeting, Speaker C (industrial designer) calculated that removing the sample speaker brought the production cost down to twelve point thirty-five Euros, before Speaker B (project manager) finalized it as twelve point twenty-five Euros. This was slightly below their budget from the first meeting, which Speaker B stated was a production cost of twelve fifty.",
+    "citations": [
+      {
+        "meeting_id": "ES2004d",
+        "quote": "No 'cause it's samples sens sample speaker. If you took away that, that'll make it twelve point three five."
+      },
+      {
+        "meeting_id": "ES2004d",
+        "quote": "It's two point five. No, it's twelve point two five."
+      },
+      {
+        "meeting_id": "ES2004a",
+        "quote": "I think Yeah, um production cost's at twelve fifty, so"
+      }
+    ],
+    "steps": 7,
+    "trace": [
+      "search({\"meeting_id\": \"ES2004d\", \"query\": \"cost\"})",
+      "search({\"meeting_id\": \"ES2004d\", \"query\": \"twelve\"})",
+      "search({\"query\": \"production cost\", \"meeting_id\": \"ES2004a\"})",
+      "find_facts({\"keyword\": \"production cost\"})",
+      "read_turns({\"meeting_id\": \"ES2004d\", \"to_turn\": 365, \"from_turn\": 320})",
+      "read_turns({\"meeting_id\": \"ES2004a\", \"from_turn\": 90, \"to_turn\": 105})",
+      "submit_answer({\"answer\": \"In Team ES2004's final meeting, Speaker C (industrial designer) calculated that removing the sample speaker )"
+    ],
+    "citations_ok": true,
+    "verdict": "correct",
+    "judge_reason": "The response correctly identifies both the production cost reached after removing the sample speaker (twelve point thirty-five / twelve point twenty-five Euros) and accurately compares it to the budget from the first meeting (twelve point fifty Euros)."
+  },
+  {
+    "id": "E10",
+    "team": "ES2002",
+    "kind": "hard: implicit reference",
+    "question": "Team ES2002 talked about using rubber in meeting c. What did they want rubber for, and what happened to the rubber in their final design?",
+    "gold": "In ES2002c they planned plastic with rubber (rubber buttons / rubber on the case, like shock-resistant phones); in ES2002d they had to skip the rubber for the buttons and use plastic because of cost.",
+    "must": 0.0,
+    "evidence": [
+      "ES2002c#209",
+      "ES2002c#283",
+      "ES2002c#354",
+      "ES2002d#114",
+      "ES2002d#115",
+      "ES2002d#554"
+    ],
+    "answer": "(not run: daily API quota exhausted / model unavailable)",
+    "citations": [],
+    "steps": 0,
+    "trace": [],
+    "citations_ok": false,
+    "verdict": "not run",
+    "judge_reason": "gemini-3.8-flash: still failing after 8 attempts (agent:E10:step1)"
+  }
+]

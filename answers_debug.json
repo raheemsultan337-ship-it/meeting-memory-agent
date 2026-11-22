@@ -1,0 +1,640 @@
+[
+  {
+    "question_id": "Q01",
+    "answer": "When cost cuts were required, the team dropped speech recognition and kept the LCD screen because Speaker C (industrial designer) noted they had not really integrated speech into the system, whereas Speaker B (user interface designer) pointed out that losing the LCD screen would mean \"We lose our whole concept.\"",
+    "citations": [
+      {
+        "meeting_id": "TS3006d",
+        "quote": "We uh we we haven't really integrated this the speech into the system, so we can might as well s drop that."
+      },
+      {
+        "meeting_id": "TS3006d",
+        "quote": "We lose our whole concept. Uh so No we just We keep the L_C_D_."
+      },
+      {
+        "meeting_id": "TS3006b",
+        "quote": "Um there was some research on new features in a remote control. Uh about an L_C_D_ screen uh and speech recognition. Well we got an update for the for the audience. Or the the the targeted group. So it's above forty I guess."
+      }
+    ],
+    "_steps": 8,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"speech screen drop cost\"})",
+      "search({\"query\": \"lose screen extra buttons concept\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"Because if you d lose the L_C_D_ screen, we need a lot of Yeah. We need a lot of extra buttons)",
+      "search({\"query\": \"speech screen integrated\"})",
+      "search({\"query\": \"speech recognition screen cost\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"TS3006d\", \"quote\": \"We lose our whole concept. Uh so No we just We keep the L_C_D_.\"}, {\")",
+      "search({\"query\": \"speech recognition age groups screen\"})",
+      "submit_answer({\"answer\": \"When cost cuts were required, the team dropped speech recognition and kept the LCD screen because Speaker C )"
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "answer": "Team ES2003 initially leaned toward using flexible rubber for the remote's casing, but ultimately switched to plastic and a solid unit in order to stay within their proposed budget constraints. Speaker B (project manager) explained that this material and structural change was necessary to compensate for costs such as the LCD screen and come back under the proposed budget.",
+    "citations": [
+      {
+        "meeting_id": "ES2003c",
+        "quote": "looks like we're pretty much decided on some kind of flexible rubber."
+      },
+      {
+        "meeting_id": "ES2003d",
+        "quote": "changing it to plastic and a solid unit with a single curve design would allow us to come back into the um proposed costs"
+      }
+    ],
+    "_steps": 4,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"flexible rubber plastic solid unit costs\"})",
+      "find_facts({\"keyword\": \"flexible rubber\"})",
+      "find_facts({\"keyword\": \"plastic and a solid unit\"})",
+      "submit_answer({\"answer\": \"Team ES2003 initially leaned toward using flexible rubber for the remote's casing, but ultimately switched t)"
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "answer": "Speaker B (user interface designer) first proposed replacing the titanium with titanium-coloured plastic, and the titanium was indeed dropped in the end to make the remote all-plastic.",
+    "citations": [
+      {
+        "meeting_id": "TS3009c",
+        "quote": "So, we're going for a titanium back and a plastic front?"
+      },
+      {
+        "meeting_id": "TS3009d",
+        "quote": "Why why don't we replace the titanium with uh"
+      },
+      {
+        "meeting_id": "TS3009d",
+        "quote": "plastic coloured titanium, uh titanium-coloured plastic?"
+      }
+    ],
+    "_steps": 5,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"titanium back plastic\"})",
+      "submit_answer({\"answer\": \"Speaker B (user interface designer) first proposed replacing the titanium back with titanium-coloured plasti)",
+      "search({\"query\": \"titanium back plastic front\"})",
+      "search({\"query\": \"titanium back plastic front trade-off\"})",
+      "submit_answer({\"answer\": \"Speaker B (user interface designer) first proposed replacing the titanium with titanium-coloured plastic, an)"
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "answer": "Team TS3011 chose a combination of traditional batteries and a solar panel as their energy source. When the production costs were added up, the solar cells were dropped from the design in order to reduce the cost to twelve euros forty cents.",
+    "citations": [
+      {
+        "meeting_id": "TS3011c",
+        "quote": "So uh uh just uh the energy source is um the batteries and the solar. Okay."
+      },
+      {
+        "meeting_id": "TS3011d",
+        "quote": "Twelve Euro forty cents I came up with by leaving out the solar cells,"
+      }
+    ],
+    "_steps": 5,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"solar panel rechargeable batteries TS3011\"})",
+      "search({\"query\": \"Twelve Euro forty cents leaving out solar cells TS3011d\"})",
+      "read_turns({\"from_turn\": 285, \"meeting_id\": \"TS3011c\", \"to_turn\": 297})",
+      "read_turns({\"from_turn\": 50, \"to_turn\": 60, \"meeting_id\": \"TS3011d\"})",
+      "submit_answer({\"answer\": \"Team TS3011 chose a combination of traditional batteries and a solar panel as their energy source. When the )"
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "answer": "Team TS3007 initially considered a combination of battery and kinetic energy (or kinetic power), but Speaker A (project manager) proposed skipping the kinetic option, and they ended up settling on a standard battery.",
+    "citations": [
+      {
+        "meeting_id": "TS3007c",
+        "quote": "Yeah, you you you should we should A combination. Uh, you use the battery and w charge it up with kinetic. When you pick it up, it charges up."
+      },
+      {
+        "meeting_id": "TS3007d",
+        "quote": "The kinetic thing, can we just skip it, because uh you have to shake it, but that's not really innovative."
+      },
+      {
+        "meeting_id": "TS3007d",
+        "quote": "Yeah, we just put a good battery it it. Mobile phones nowadays."
+      }
+    ],
+    "_steps": 6,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"infrared transmitting battery kinetic\"})",
+      "search({\"query\": \"radio waves bluetooth battery kinetic TS3007a TS3007d\"})",
+      "search({\"query\": \"The kinetic thing can we just skip it TS3007d\"})",
+      "search({\"query\": \"infrared transmitting battery TS3007b TS3007d\"})",
+      "search({\"query\": \"skip it kinetic Speaker A TS3007d\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"TS3007c\", \"quote\": \"Yeah, you you you should we should A combination. Uh, you use the bat)"
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "answer": "Speaker C (user interface designer) raised the objection that a device to find lost remotes would be technologically difficult because infrared signals cannot reach under a settee, and the team ultimately dropped the feature.",
+    "citations": [
+      {
+        "meeting_id": "ES2008d",
+        "quote": "I think it would be difficult technologically, because if your if your remote's lost it's probably under the settee and in that case you can't you can't send an infrared sing signal to it to find it, s so it's"
+      },
+      {
+        "meeting_id": "ES2008d",
+        "quote": "Mm-hmm. Okay, that's a fair evaluation. Getting lost. Um we so we do we've decided not to worry about that for now."
+      }
+    ],
+    "_steps": 9,
+    "_problems": [
+      "all citations come from ONE meeting; every question needs at least two meetings of the team: add a citation from another meeting"
+    ],
+    "_trace": [
+      "search({\"query\": \"lost remote finder beeper locater ES2008\"})",
+      "search({\"query\": \"lost remote beacon beeper locator ES2008c ES2008d\"})",
+      "search({\"query\": \"lost remote speaker c tech difficult infrared ES2008d\"})",
+      "search({\"query\": \"lost remote dropped abandon decided not to ES2008\"})",
+      "search({\"query\": \"difficult technologically infrared settee ES2008d\"})",
+      "search({\"query\": \"lost remote technological settee infrared ES2008d\"})",
+      "search({\"query\": \"decided not to worry about that for now ES2008d\"})",
+      "find_facts({\"keyword\": \"lost\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"I think it would be difficult technologically, because if your if your remote's lost it's prob)"
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "answer": "Speaker D (marketing) came back with the figure that adding a display would cost approximately two to three Euros.",
+    "citations": [
+      {
+        "meeting_id": "IS1008c",
+        "quote": "What do you think Ed? Do you he liked the display in one of the concepts that you showed, um, do you know how much it costs, um, to to add a little display like this uh?"
+      },
+      {
+        "meeting_id": "IS1008d",
+        "quote": "It's not it doesn't say. We don't have the price up there, okay, so if we add approximately two to three Euro per"
+      }
+    ],
+    "_steps": 3,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"display cost\"})",
+      "search({\"query\": \"two to three Euro\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"What do you think Ed? Do you he liked the display in one of the concepts that you showed, um, )"
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "answer": "Speaker D (marketing) brought up repetitive strain injury (RSI) related to changing TV channels, and the team responded by designing an ergonomic double-curved rubber case with separate right-handed and left-handed versions.",
+    "citations": [
+      {
+        "meeting_id": "ES2007b",
+        "quote": "Um also with um with buttons, a thing called R_S_I_, so wrist sense Huh?"
+      },
+      {
+        "meeting_id": "ES2007d",
+        "quote": "So, everything uh that we wanted we wanted it to be ergonomic and to be made out of rubber, very simple and easy to use, yeah, double curved"
+      },
+      {
+        "meeting_id": "ES2007d",
+        "quote": "Yeah, if we build rocket ships why can't we build left-handed and right-handed uh remotes."
+      }
+    ],
+    "_steps": 2,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"health complaint hand wrist\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"ES2007b\", \"quote\": \"Um also with um with buttons, a thing called R_S_I_, so wrist sense H)"
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "answer": "Team IS1002 initially worked with a wholesale selling price of twenty-five Euros, but later settled on a sales bracket of thirty-five to fifty Euros. Speaker D (marketing) pushed hardest for a higher, more exclusive price.",
+    "citations": [
+      {
+        "meeting_id": "IS1002b",
+        "quote": "And so the th the twenty-five Euros that we've identified as the sale price is a wholesale price rather than a retail price."
+      },
+      {
+        "meeting_id": "IS1002c",
+        "quote": "Thirty five to fifty Euros is our sales bracket okay."
+      },
+      {
+        "meeting_id": "IS1002b",
+        "quote": "Well, see I I see I I'm an advocate to make this an exclusive product. You know, let's let's sell this wholesale for for fifty Euros, sixty Euros."
+      }
+    ],
+    "_steps": 2,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"twenty-five Euros wholesale price price bracket\"})",
+      "submit_answer({\"answer\": \"Team IS1002 initially worked with a wholesale selling price of twenty-five Euros, but later settled on a sal)"
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "answer": "Team TS3003 decided to design for the sixty to eighty age group rather than younger customers because targeting older people with an innovative product would be good for the company's image.",
+    "citations": [
+      {
+        "meeting_id": "TS3003b",
+        "quote": "I think that would be a If we should do something like that it would be a, I think it would be really good for uh for the image of the company."
+      },
+      {
+        "meeting_id": "TS3003c",
+        "quote": "And we're going to target uh sixty to to eighty year old customers."
+      }
+    ],
+    "_steps": 5,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"target group older people forty plus\"})",
+      "search({\"query\": \"sixty to eighty year old customers target group\"})",
+      "submit_answer({\"answer\": \"Team TS3003 decided to design for the sixty to eighty age group (or real elderly people) rather than younger)",
+      "search({\"query\": \"image company innovative product elderly people\"})",
+      "submit_answer({\"answer\": \"Team TS3003 decided to design for the sixty to eighty age group rather than younger customers because target)"
+    ]
+  },
+  {
+    "question_id": "Q11",
+    "answer": "Speaker A (project manager) said she would check whether \"use only for television\" meant excluding DVD capabilities or just internet features, and when it came up again, she stated that they were actually not having DVD compatibility.",
+    "citations": [
+      {
+        "meeting_id": "ES2011b",
+        "quote": "You know actually our our new project requirements, I'm not sure if they meant o onl use only for television as in not for D_V_D_ or just not internet type things."
+      },
+      {
+        "meeting_id": "ES2011c",
+        "quote": "We're, um, we're actually not having D_V_D_, that was one of th I I was sorry, I I meant to update you on that."
+      }
+    ],
+    "_steps": 3,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"check DVD television requirements\"})",
+      "search({\"query\": \"not having DVD\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"ES2011b\", \"quote\": \"You know actually our our new project requirements, I'm not sure if t)"
+    ]
+  },
+  {
+    "question_id": "Q12",
+    "answer": "Speaker D (marketing) explained that voice recognition was removed from the standard model to meet cost and budget requirements, and was instead positioned as an optional upgrade for business class customers. Speaker D also stated that the remote would remain easy to find because its design is so distinctive.",
+    "citations": [
+      {
+        "meeting_id": "ES2004d",
+        "quote": "We could do the voice recognition for, you know, business class or something, you know, like an upgraded version. You could choose to have that or not."
+      },
+      {
+        "meeting_id": "ES2004d",
+        "quote": "And I think the voice recognition sounds wonderful, but our object is so distinctive that that in itself is gonna make it easier to locate as a f you know in a first instance."
+      },
+      {
+        "meeting_id": "ES2004c",
+        "quote": "So it could be like, where is the remote, and the remote answers I am here."
+      }
+    ],
+    "_steps": 7,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"voice recognition find lost remote\"})",
+      "search({\"query\": \"voice recognition business class removed\"})",
+      "search({\"query\": \"distinctive make it easier to locate\"})",
+      "search({\"query\": \"distinctive make it easier to locate first instance business class\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"ES2004d\", \"quote\": \"And I think the voice recognition sounds wonderful, but our object is)",
+      "search({\"query\": \"voice recognition find it where is the remote\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"We could do the voice recognition for, you know, business class or something, you know, like a)"
+    ]
+  },
+  {
+    "question_id": "Q13",
+    "answer": "Yes, speech recognition was included in the final design using an advanced chip. The team last reversed their position and decided to keep it in meeting TS3004d.",
+    "citations": [
+      {
+        "meeting_id": "TS3004d",
+        "quote": "Well then then we're gonna put it in."
+      },
+      {
+        "meeting_id": "TS3004c",
+        "quote": "Okay, we just put it in, because it's a good feature. We have to stop now."
+      }
+    ],
+    "_steps": 8,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"speech recognition\"})",
+      "search({\"query\": \"speech recognition no speech recognition\"})",
+      "search({\"query\": \"advanced chip speech recognition TS3004d\"})",
+      "read_turns({\"to_turn\": 55, \"meeting_id\": \"TS3004d\", \"from_turn\": 45})",
+      "find_facts({\"keyword\": \"speech recognition\"})",
+      "read_turns({\"meeting_id\": \"TS3004d\", \"from_turn\": 1, \"to_turn\": 14})",
+      "search({\"query\": \"speech recognition TS3004b\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"Well then then we're gonna put it in.\", \"meeting_id\": \"TS3004d\"}, {\"meeting_id\": \"TS3004c\", \"q)"
+    ]
+  },
+  {
+    "question_id": "Q14",
+    "answer": "In their final costing, Speaker A (project manager) reached a production cost total of 8.2 euro (or 8.20 euro). The speech recognition feature was not included in that calculation, and Speaker A noted that there was no room for it in the financing.",
+    "citations": [
+      {
+        "meeting_id": "IS1009c",
+        "quote": "Okay, so why don't we put down speech recognition if possible pending some more research from our industrial engineer on how expensive that is."
+      },
+      {
+        "meeting_id": "IS1009d",
+        "quote": "eight point two, right? So, we looks like we are well within budget."
+      },
+      {
+        "meeting_id": "IS1009d",
+        "quote": "Um I just realised one thing. In the financing there was no room for our voice recogniser."
+      }
+    ],
+    "_steps": 7,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"speech recognition cost total budget IS1009\"})",
+      "search({\"query\": \"budget voice recogniser IS1009d\"})",
+      "search({\"query\": \"eight point two IS1009d\"})",
+      "search({\"query\": \"financing voice recogniser room IS1009d\"})",
+      "search({\"query\": \"speech recognition pending cost research IS1009\"})",
+      "search({\"query\": \"financing voice recogniser no room IS1009d\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"IS1009c\", \"quote\": \"Okay, so why don't we put down speech recognition if possible pending)"
+    ]
+  },
+  {
+    "question_id": "Q15",
+    "answer": "Speaker A (project manager) noted that their first full costing came to fifteen point five Euros, which was three Euros over their twelve point five Euros budget limit. To fix this, Speaker C (user interface designer) suggested removing the LCD screen, allowing them to rely on the television screen instead.",
+    "citations": [
+      {
+        "meeting_id": "ES2016d",
+        "quote": "So our total is fifteen point five. Which I believe is"
+      },
+      {
+        "meeting_id": "ES2016d",
+        "quote": "Yeah you could maybe take out the L_C_D_ dis display even, if it if it comes up on the computer itsel on the T_V_ itself."
+      },
+      {
+        "meeting_id": "ES2016a",
+        "quote": "something that we're supposed to sell for about twenty five Euros um and you know, goals for profits are"
+      }
+    ],
+    "_steps": 13,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"fifteen point five budget LCD screen\"})",
+      "read_turns({\"to_turn\": 265, \"meeting_id\": \"ES2016d\", \"from_turn\": 240})",
+      "search({\"query\": \"twelve point five Euros production cost target\"})",
+      "search({\"query\": \"fifteen point five three Euros over twelve point five\"})",
+      "find_facts({\"keyword\": \"15.5\"})",
+      "find_facts({\"keyword\": \"12.5\"})",
+      "find_facts({\"keyword\": \"LCD\"})",
+      "find_facts({\"keyword\": \"fifteen\"})",
+      "find_facts({\"keyword\": \"budget\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"So our total is fifteen point five. Which I believe is\", \"meeting_id\": \"ES2016d\"}, {\"meeting_i)",
+      "search({\"query\": \"Twelve and a half Euros\"})",
+      "search({\"query\": \"fifteen point five which I believe is\"})",
+      "submit_answer({\"answer\": \"Speaker A (project manager) noted that their first full costing came to fifteen point five Euros, which was )"
+    ]
+  },
+  {
+    "question_id": "Q16",
+    "answer": "Speaker A (project manager) favoured a small joystick for navigation. In the final costed design, it was replaced by normal push-buttons, and special colours were dropped at the same time to reach the 12.5 Euro budget.",
+    "citations": [
+      {
+        "meeting_id": "TS3010c",
+        "quote": "So Maybe, if it's possible, it's not too expensive, I think a joystick is better. A small one. So, please look at it."
+      },
+      {
+        "meeting_id": "TS3010d",
+        "quote": "Uh, yes, yes, yes, yes. No joystick. Push-buttons. No special colour. Twelve and a half Euros. Then it's okay."
+      }
+    ],
+    "_steps": 5,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"joystick\"})",
+      "search({\"query\": \"special colour twelve and a half Euros\"})",
+      "search({\"query\": \"joystick push-buttons special colour\"})",
+      "search({\"query\": \"small joystick like in a laptop\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"So Maybe, if it's possible, it's not too expensive, I think a joystick is better. A small one.)"
+    ]
+  },
+  {
+    "question_id": "Q17",
+    "answer": "The touch screen was provisionally chosen in meeting ES2009b, but was later dropped in meeting ES2009c in favour of voice recognition. Speaker B (industrial designer) estimated that incorporating touch screen technology would cost upwards of seventeen fifty Euro per remote.",
+    "citations": [
+      {
+        "meeting_id": "ES2009b",
+        "quote": "Let's provisionally let's go for a touch screen one with several submenus um for possible extra stuff"
+      },
+      {
+        "meeting_id": "ES2009c",
+        "quote": "My estimate is that in order to incorporate touch screen technology it's gonna cost us upwards of seventeen fifty Euro per remote, yeah that's just an estimate though."
+      },
+      {
+        "meeting_id": "ES2009c",
+        "quote": "Okay. Sorted. We will omit the touch screen in favour of voice recognition."
+      }
+    ],
+    "_steps": 8,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"touch screen dropped voice recognition cost\"})",
+      "search({\"query\": \"seventeen fifty Euro touch screen ES2009c\"})",
+      "search({\"query\": \"touch screen dropped meeting\"})",
+      "search({\"query\": \"seventeen fifty Euro touch screen\"})",
+      "search({\"query\": \"voice recognition omitted touch screen ES2009c\"})",
+      "submit_answer({\"answer\": \"The touch screen was dropped during meeting ES2009c, in favour of voice recognition. Speaker B (industrial d)",
+      "search({\"query\": \"touch screen ES2009b\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"ES2009b\", \"quote\": \"Let's provisionally let's go for a touch screen one with several subm)"
+    ]
+  },
+  {
+    "question_id": "Q18",
+    "answer": "Team ES2014 first planned to include a whistle-back function for finding a lost remote, which was changed to a clap-activated locating function, and Speaker C (user interface designer) suggested marketing it as a finder function rather than competing on speech recognition.",
+    "citations": [
+      {
+        "meeting_id": "ES2014b",
+        "quote": "well i think it'd be really easy and it'd be a big advantage if we did have some sort of um kind of whistle back kind of function."
+      },
+      {
+        "meeting_id": "ES2014b",
+        "quote": "Well, so maybe a clap rather than a whistle would be On the basis that if we've got if we're catering to the whole age range, you want something that's easy to do, now something that doesn't like whis uh"
+      },
+      {
+        "meeting_id": "ES2014c",
+        "quote": "it might be a good idea to market it as a um finder function."
+      }
+    ],
+    "_steps": 3,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"whistle finder clap\"})",
+      "search({\"query\": \"market it as a finder function\"})",
+      "submit_answer({\"answer\": \"Team ES2014 first planned to include a whistle-back function for finding a lost remote, which was changed to)"
+    ]
+  },
+  {
+    "question_id": "Q19",
+    "answer": "Speaker B (user interface designer) suggested switching the case material from wood to plastic.",
+    "citations": [
+      {
+        "meeting_id": "IS1003c",
+        "quote": "So you think case. Something spongy. Someth no wood."
+      },
+      {
+        "meeting_id": "IS1003d",
+        "quote": "I think you can transform the wood into plastic, maybe."
+      }
+    ],
+    "_steps": 3,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"transform the wood into plastic\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"IS1003c\", \"quote\": \"No wood but Plastic?\"}, {\"quote\": \"I think you can transform the wood)",
+      "submit_answer({\"answer\": \"Speaker B (user interface designer) suggested switching the case material from wood to plastic.\", \"citations)"
+    ]
+  },
+  {
+    "question_id": "Q20",
+    "answer": "Speaker A (project manager) said she would look into whether the remote should include video recorder functions, and it was later reported back that it would focus on television only.",
+    "citations": [
+      {
+        "meeting_id": "ES2008a",
+        "quote": "It's a good question. Um. I'll look into that."
+      },
+      {
+        "meeting_id": "ES2008b",
+        "quote": "Just for television. That's what we're focused on. Um otherwise becomes to complex,"
+      }
+    ],
+    "_steps": 3,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"video recorder functions television only look into\"})",
+      "search({\"query\": \"television only complex management decided\"})",
+      "submit_answer({\"citations\": [{\"quote\": \"It's a good question. Um. I'll look into that.\", \"meeting_id\": \"ES2008a\"}, {\"meeting_id\": \"ES2)"
+    ]
+  },
+  {
+    "question_id": "Q21",
+    "answer": "Speaker C (industrial designer) reported that a version with all functionalities would cost about fifteen dollars, and the team ultimately decided to drop the LCD screen to reduce cost and make the remote control simpler.",
+    "citations": [
+      {
+        "meeting_id": "IS1007c",
+        "quote": "It's yeah of course it's fancy trendy and so on but it's it's expensive to produce and it's not really"
+      },
+      {
+        "meeting_id": "IS1007d",
+        "quote": "It's about so the total cost if you if you want all the fuct functionalities will be about uh fifteen dollars."
+      },
+      {
+        "meeting_id": "IS1007d",
+        "quote": "As our Programme Manager s Pro Project Manager says that without L_C_D_ it is going to reduce the cost also, and it's going to be much simpler to use."
+      }
+    ],
+    "_steps": 5,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"price LCD four dollars\"})",
+      "search({\"query\": \"total cost if you want all functionalities\"})",
+      "search({\"query\": \"LCD screen dropped\"})",
+      "submit_answer({\"answer\": \"Speaker C (industrial designer) reported that a version with all functionalities would cost about fifteen do)",
+      "submit_answer({\"answer\": \"Speaker C (industrial designer) reported that a version with all functionalities would cost about fifteen do)"
+    ]
+  },
+  {
+    "question_id": "Q22",
+    "answer": "Speaker B (industrial designer) suggested using a small lithium battery, while other team members initially discussed using AAA or AA batteries. Ultimately, the team decided to go with a lithium battery.",
+    "citations": [
+      {
+        "meeting_id": "ES2010c",
+        "quote": "I think, well, we could d r do two or we could do one small lithium, 'cause you know the lithium batteries are doing quite well in most other electronic products, right?"
+      },
+      {
+        "meeting_id": "ES2010d",
+        "quote": "Yeah. But if it's a do you wanna go for this is where we need to make a final call on if it's a lithium or do we wanna go triple A_s, 'cause triple A_s we're gonna have t do more than one battery."
+      }
+    ],
+    "_steps": 3,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"lithium battery\"})",
+      "submit_answer({\"answer\": \"Speaker B (industrial designer) suggested using a small lithium battery, while other team members initially )"
+    ]
+  },
+  {
+    "question_id": "Q23",
+    "answer": "To fit under budget, Speaker B (marketing) and Speaker D (user interface designer) dropped the expensive sample sensor, sample speaker, and locator feature, replacing the sample speaker and locator with a simple beeping device. Additionally, Speaker A (industrial designer) and Speaker B (marketing) dropped the side scroll wheel and replaced it with two side pushbuttons for volume.",
+    "citations": [
+      {
+        "meeting_id": "ES2006d",
+        "quote": "Well the speaker uh the sample speaker is is expensive, but we could just have some some very very easy device that just beeps."
+      },
+      {
+        "meeting_id": "ES2006d",
+        "quote": "Instead of scrolling here we have two buttons here, up for up and down. On the side."
+      },
+      {
+        "meeting_id": "ES2006c",
+        "quote": "So we've basically worked out that we're going with a simple battery, the advanced chip and a curved on one side case which is folded in on itself"
+      }
+    ],
+    "_steps": 6,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"budget advanced integrated circuit LCD screen voice recognition\"})",
+      "search({\"query\": \"sample speaker beeping device budget ES2006d\"})",
+      "search({\"query\": \"scroll wheel side buttons ES2006d\"})",
+      "submit_answer({\"answer\": \"To get under budget, Speaker B (marketing) and Speaker D (user interface designer) proposed dropping the exp)",
+      "search({\"query\": \"advanced chip LCD screen voice recognition\"})",
+      "submit_answer({\"answer\": \"To fit under budget, Speaker B (marketing) and Speaker D (user interface designer) dropped the expensive sam)"
+    ]
+  },
+  {
+    "question_id": "Q24",
+    "answer": "Team ES2002 first agreed on using regular batteries as their power source, and project manager Speaker B liked the idea of adding kinetic power, but their final design ultimately used regular batteries only.",
+    "citations": [
+      {
+        "meeting_id": "ES2002b",
+        "quote": "Okay, so just stick to to regular Okay."
+      },
+      {
+        "meeting_id": "ES2002c",
+        "quote": "I really like the idea of this kinetic thing where you'd have the back-up of the battery, but have have kinetic power, I mean what does anybody think about that?"
+      },
+      {
+        "meeting_id": "ES2002d",
+        "quote": "power-wise, have we got battery? Do we have kinetic as well? No. Okay, just battery."
+      }
+    ],
+    "_steps": 4,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"power source kinetic battery ES2002\"})",
+      "search({\"query\": \"regular Okay battery ES2002b\"})",
+      "search({\"query\": \"kinetic power ES2002c\"})",
+      "submit_answer({\"citations\": [{\"meeting_id\": \"ES2002b\", \"quote\": \"Okay, so just stick to to regular Okay.\"}, {\"quote\": \"I really like t)"
+    ]
+  },
+  {
+    "question_id": "Q25",
+    "answer": "Speaker B (industrial designer) noted that complex fruit and vegetable shapes would cost more to produce and might annoy users, so the team decided to use different colors and patterns printed on the rubber base instead.",
+    "citations": [
+      {
+        "meeting_id": "ES2011c",
+        "quote": "Don't think I'd want it to feel like a banana."
+      },
+      {
+        "meeting_id": "ES2011d",
+        "quote": "I bet having different colours is a lot cheaper than having different shapes too."
+      },
+      {
+        "meeting_id": "ES2011d",
+        "quote": "It might also sort of annoy people if we get used to having the buttons in one shape."
+      }
+    ],
+    "_steps": 4,
+    "_problems": [],
+    "_trace": [
+      "search({\"query\": \"fruit vegetable shape rubber comfort cost\"})",
+      "search({\"query\": \"patterns on the rubber instead of complex fruit shapes\"})",
+      "submit_answer({\"answer\": \"Speaker B (industrial designer) noted that complex fruit and vegetable shapes would cost more to produce and)",
+      "submit_answer({\"answer\": \"Speaker B (industrial designer) noted that complex fruit and vegetable shapes would cost more to produce and)"
+    ]
+  }
+]
