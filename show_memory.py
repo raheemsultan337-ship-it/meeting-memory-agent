@@ -60,4 +60,4 @@ def main(team: str, topic: str) -> None:
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         sys.exit("usage: python show_memory.py TEAM TOPIC   e.g.  python show_memory.py TS3009 titanium")
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], " ".join(sys.argv[2:]))   # multi-word topics, e.g. "lcd screen"
