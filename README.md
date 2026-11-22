@@ -52,6 +52,7 @@ The repo ships the built memory store (`memory.db`) and every API response we re
 
 ```bash
 python agent.py ask "Team ES2008 wanted a feature to stop the remote getting lost. What happened to it?"
+python show_memory.py TS3009 titanium     # the four memory layers for one topic
 python timeline.py --show TS3009          # how the agent knows what is current
 python search.py --compare "how did they stop the remote getting lost?" ES2005   # keyword vs meaning vs hybrid
 ```
