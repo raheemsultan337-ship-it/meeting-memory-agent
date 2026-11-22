@@ -197,11 +197,28 @@ def guess_team(conn, question: str) -> str | None:
     return m.group(0) if m else None
 
 
+def answer_with_escalation(conn: sqlite3.Connection, team: str, question: str, qid: str) -> dict:
+    """Normal budget first. If the gate still reports problems (e.g. only one meeting
+    cited), retry once with a bigger step/retry budget and keep the better answer."""
+    global MAX_STEPS, RETRIES
+    r = answer_question(conn, team, question, qid)
+    if not r["problems"]:
+        return r
+    saved = MAX_STEPS, RETRIES
+    MAX_STEPS, RETRIES = 12, 3
+    try:
+        r2 = answer_question(conn, team, question, f"{qid}-redo")
+    finally:
+        MAX_STEPS, RETRIES = saved
+    better = r2["citations"] and (not r2["problems"] or len(r2["problems"]) < len(r["problems"]))
+    return r2 if better else r
+
+
 def answer_all(conn: sqlite3.Connection) -> list[dict]:
     qs = json.loads(config.QUESTIONS_PATH.read_text(encoding="utf-8"))["questions"]
     results = []
     for q in qs:
-        r = answer_question(conn, q["team"], q["question"], q["question_id"])
+        r = answer_with_escalation(conn, q["team"], q["question"], q["question_id"])
         results.append({"question_id": q["question_id"], "answer": r["answer"], "citations": r["citations"],
                         "_steps": r["steps"], "_problems": r["problems"], "_trace": r["trace"]})
         print(f"  {q['question_id']}: {r['steps']} steps, {len(r['citations'])} citations"
@@ -217,7 +234,10 @@ if __name__ == "__main__":
         team = guess_team(conn, question)
         if not team:
             sys.exit("Name the team in the question, e.g. 'Team ES2008 ...'")
-        r = answer_question(conn, team, question, qid="ask", verbose=True)
+        try:
+            r = answer_question(conn, team, question, qid="ask", verbose=True)
+        except (llm.MissingKey, llm.QuotaExhausted) as e:
+            sys.exit(f"\nCan't answer this new question right now: {e}")
         print(f"\nANSWER: {r['answer']}")
         for c in r["citations"]:
             print(f'  [{c["meeting_id"]}] "{c["quote"]}"')

@@ -26,7 +26,23 @@ python run.py all               # every stage, in order (resumable; safe to re-r
 python run.py validate          # check answers.json against every submission rule
 ```
 
-**No API key?** `cache.db` contains every model and embedding response we got. Each request is fingerprinted (model + prompt + settings), so running the stages replays from the cache and reproduces `answers.json` without calling Gemini. (`memory.db` itself is rebuilt from the transcripts by `python run.py ingest`, which is pure code.)
+## What to expect when you run it
+
+The repo ships the built memory store (`memory.db`) and every API response we received (`cache.db`, keyed by a fingerprint of model + prompt + settings). So:
+
+| You run... | Without an API key | With your own (free) key |
+|---|---|---|
+| `python run.py answer && python run.py brief && python run.py assemble` | **Reproduces `answers.json` byte for byte, with zero API calls.** Tested on a clean copy with no key. | Same (all cached) |
+| `python agent.py ask "<one of the 25 questions>"`, the commands in `DEMO_SCRIPT.md` | Works (cached) | Works |
+| `python agent.py ask "<a new question>"` | Clear message: needs a key | Works: about 6 flash-lite calls, about 10-30 s |
+| `python run.py validate`, `python -m pytest` | Works (pure code) | Works |
+| Rebuild everything from scratch (delete `memory.db` + `cache.db`, `python run.py all`) | Needs a key | About 1.5 h on the free tier, and it just fits in one day's quota (about 330 flash-lite requests of 500/day, about 870 embedding texts of 1,000/day) |
+
+**Honest caveats (all handled in code, see NOTES.md):**
+- **Free-tier quotas are small:** flash-lite 500 requests/day, other text models 20/day, embeddings 1,000 texts/day (quotas reset at midnight Pacific). If a daily quota runs out, `llm.py` falls back to the next model in `config.FALLBACKS`; if everything is exhausted, the stage **stops cleanly** and a rerun resumes where it left off. Nothing is lost, because every call is cached as soon as it returns.
+- **Google often returns 503 "high demand"** at busy times. You'll see lines like `[gemini-3.5-flash-lite] 503, waiting 4s (attempt 2/8)`. That's the retry logic working, not a failure.
+- **Model names change.** `gemini-2.5-*` was retired for new users during this build. If a model isn't available to your key, set `MODEL_FAST` / `MODEL_SMART` / `MODEL_EMBED` in `.env` (list yours with `python llm.py models`). Changing the embedding model requires `python index.py --rechunk`.
+- Data location: set `DATA_DIR` in `.env` if the Catalist folder isn't next to this one.
 
 ## Ask your own question (live demo)
 

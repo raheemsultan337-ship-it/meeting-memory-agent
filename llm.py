@@ -69,6 +69,10 @@ class QuotaExhausted(Exception):
     """Daily quota for a model is used up. Stop the stage; rerun after the reset."""
 
 
+class MissingKey(RuntimeError):
+    """No GEMINI_API_KEY and the request isn't in cache.db. Cached work still replays."""
+
+
 # ======================================================================= cache
 _cache_conn: sqlite3.Connection | None = None
 
@@ -209,7 +213,9 @@ def _get_client():
     global _client
     if _client is None:
         if not config.GEMINI_API_KEY:
-            raise RuntimeError("GEMINI_API_KEY missing: put it in meeting-memory/.env")
+            raise MissingKey("This request is not in cache.db and no GEMINI_API_KEY is set. "
+                             "Cached questions replay without a key; new ones need a key in .env "
+                             "(free: aistudio.google.com/apikey).")
         # attempts=1 turns OFF the SDK's own silent retries: we found they retried a
         # 503 for minutes with no output. Our _with_retries owns retrying, logs every
         # failure, and knows per-minute 429 (wait) from per-day 429 (stop).

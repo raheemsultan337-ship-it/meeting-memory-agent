@@ -32,3 +32,8 @@ Running log for the write-up section "where your tools broke at this size".
 - **flash-lite free tier = 500 requests/day** (`GenerateRequestsPerDayPerProjectPerModel-FreeTier=500`), hit during the eval at 19:27. The automatic fallback switched to `gemini-3.6-flash` (own quota), which was itself returning 503s, so retries were raised from 5 to 8.
 - **A truncated JSON response got cached** (the brief: the thinking model spent its output tokens thinking). Fix: responses with finish_reason MAX_TOKENS are never cached, and the brief's budget is raised to 32k.
 - Measured per meeting: extraction 8.9k in / 1.3k out tokens, 7.0 s; embeddings 7.1k tokens. About 120 503/504 errors over the day, all absorbed by retries.
+
+## Reproducibility check (grader's view)
+- **Problem found:** the cache keys on exact prompts, and timeline prompts contain fact ids that depend on extraction ORDER (TS3009 was extracted first as a trial; two failed meetings were redone at the end). A fresh rebuild would get different ids, so cache misses, so it would crash without a key. Also, `agent.py redo` was a manual step that a fresh run wouldn't repeat.
+- **Fixes:** ship `memory.db` (35 MB) with the repo; make the retry automatic (`answer_with_escalation`: a question with gate problems is retried once with 12 steps / 3 retries); clear messages instead of tracebacks when there's no key; keyword-only fallback for new search queries without a key.
+- **Verified:** on a clean copy with no `.env`, `run.py answer` + `brief` + `assemble` reproduced `answers.json` **byte for byte**, with zero new API calls (usage.jsonl unchanged).

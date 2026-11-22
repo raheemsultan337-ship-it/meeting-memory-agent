@@ -178,8 +178,8 @@ def hybrid_search(conn: sqlite3.Connection, query: str, team: str | None = None,
     rankings = {"bm25": chunk_keywords(conn, query, team, meeting)}
     try:
         rankings["vector"] = vector_search(conn, query, team, meeting)
-    except llm.QuotaExhausted:
-        pass
+    except (llm.QuotaExhausted, llm.MissingKey):
+        pass   # no quota / no key for a NEW query: keyword-only, still works
     fused = rrf(rankings)
     results = []
     for cid, score, ranks in fused[:limit]:
@@ -213,7 +213,10 @@ if __name__ == "__main__":
 
     if compare:
         show("BM25 only", chunk_keywords(conn, q, team))
-        show("Vectors only", vector_search(conn, q, team))
+        try:
+            show("Vectors only", vector_search(conn, q, team))
+        except (llm.QuotaExhausted, llm.MissingKey) as e:
+            print(f"\n=== Vectors only: skipped ({e})")
     print(f"\n=== HYBRID (RRF) for: {q!r}  team={team}")
     for p in hybrid_search(conn, q, team, limit=4):
         print(f"-- {p['meeting_id']} turns {p['start_idx']}-{p['end_idx']}  "

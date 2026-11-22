@@ -12,7 +12,8 @@ load_dotenv(ROOT / ".env")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # Catalist's data sits next to the project; we read it in place, never copy it.
-DATA_DIR = ROOT.parent / "Catalist_AI_Intern_Build_Test_Data"
+# Override with DATA_DIR=/path/to/Catalist_AI_Intern_Build_Test_Data in .env or the environment.
+DATA_DIR = Path(os.getenv("DATA_DIR") or ROOT.parent / "Catalist_AI_Intern_Build_Test_Data")
 TRANSCRIPTS_DIR = DATA_DIR / "transcripts"
 QUESTIONS_PATH = DATA_DIR / "questions.json"
 
