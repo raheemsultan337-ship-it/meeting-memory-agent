@@ -56,7 +56,12 @@ python timeline.py --show TS3009          # how the agent knows what is current
 python search.py --compare "how did they stop the remote getting lost?" ES2005   # keyword vs meaning vs hybrid
 ```
 
-The question must name a team (e.g. `TS3009`). `ask` prints each tool call the agent makes, the answer, and the verified citations.
+`ask` prints each tool call the agent makes, the answer, and the verified citations.
+
+**Asking a new question** (locally or in Colab section 6):
+1. Get a free key at https://aistudio.google.com/apikey and put it in `.env` as `GEMINI_API_KEY=...` (in Colab: 🔑 Secrets → `GEMINI_API_KEY`, with Notebook access on).
+2. Run `python agent.py ask "<question>"`. The question **must name a team** (`ES2002`-`ES2016`, `IS1000`-`IS1009`, `TS3003`-`TS3012`) and must not contain double quotes.
+3. About 6 model calls and 10-30 s per question. `503, waiting 4s` lines are the retry logic handling a busy Google. If the daily quota (flash-lite: 500/day per Google project) is used up, you get a clear message; it resets at midnight Pacific.
 
 ## Stages
 
